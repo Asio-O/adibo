@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 using System.Text;
 using Microsoft.Extensions.Options;
 using AdiboProxy.Endpoints;
