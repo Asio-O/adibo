@@ -41,14 +41,14 @@ value = Base64(AES_ECB_PKCS7(host, key));
 
 ```json
 {
-  "MemberId": 14664086372293,
+  "MemberId": 14664000000000,
   "AccountType": 1,
-  "NickName": "小霸王其乐无穷",
-  "Account": "17674351088",
+  "NickName": "<昵称>",
+  "Account": "<账号>",
   "LoginMode": 1,
-  "iat": 1790060595,
-  "nbf": 1790060595,
-  "exp": 1842620595
+  "iat": 1790000000,
+  "nbf": 1790000000,
+  "exp": 1840000000
 }
 ```
 
