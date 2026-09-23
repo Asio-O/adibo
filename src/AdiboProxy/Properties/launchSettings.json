@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "AdiboProxy": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:62769;http://localhost:62770"
+    }
+  }
+}

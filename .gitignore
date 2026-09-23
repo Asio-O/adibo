@@ -1,0 +1,21 @@
+# 构建产物
+bin/
+obj/
+publish/
+
+# 本地状态：token、会话缓存、日志
+data/
+logs/
+
+# 浏览器配置与录制产物
+.browser-profile/
+.edge-profile/
+recording/
+
+# IDE
+.vs/
+*.user
+
+# Python
+__pycache__/
+*.pyc

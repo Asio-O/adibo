@@ -1,0 +1,770 @@
+[
+  {
+    "model": "ouyi-chat",
+    "score": 4,
+    "total": 8,
+    "checks": {
+      "字母计数": {
+        "pass": false,
+        "note": "答 None（应 3）",
+        "answer": "一个。",
+        "ms": 2074
+      },
+      "汉字计数": {
+        "pass": false,
+        "note": "答 25（应 16）",
+        "answer": "25",
+        "ms": 12126
+      },
+      "多步算术": {
+        "pass": false,
+        "note": "答 17（应 11）",
+        "answer": "17",
+        "ms": 9510
+      },
+      "精确乘法": {
+        "pass": true,
+        "note": "答 56088（应 56088）",
+        "answer": "56088",
+        "ms": 13327
+      },
+      "小数比较": {
+        "pass": false,
+        "note": "答 9.11（应 9.9）",
+        "answer": "9.11 更大。",
+        "ms": 2917
+      },
+      "字符反转": {
+        "pass": true,
+        "note": "fedcba",
+        "answer": "fedcba",
+        "ms": 10780
+      },
+      "逻辑推理": {
+        "pass": true,
+        "note": "鸡23 / 兔12",
+        "answer": "鸡有23只，兔有12只。",
+        "ms": 2522
+      },
+      "指令遵循": {
+        "pass": true,
+        "note": "[4, 5, 1]（需 3 个 1-5 整数、和=10）",
+        "answer": "```json\n[4, 5, 1]\n```",
+        "ms": 12776
+      }
+    },
+    "avg_ms": 8254,
+    "first_error": null,
+    "label": "Ouyi Chat",
+    "declared_context": 1048576,
+    "declared_output": 65536,
+    "declared_max": 1114112,
+    "measured_context": 128000,
+    "measured_output": 12,
+    "limit_notes": "输入 ≥256000 字符即失败；该长度下开头仍可见"
+  },
+  {
+    "model": "gpt-5-nano",
+    "score": 8,
+    "total": 8,
+    "checks": {
+      "字母计数": {
+        "pass": true,
+        "note": "答 3（应 3）",
+        "answer": "3",
+        "ms": 10983
+      },
+      "汉字计数": {
+        "pass": true,
+        "note": "答 16（应 16）",
+        "answer": "16",
+        "ms": 9668
+      },
+      "多步算术": {
+        "pass": true,
+        "note": "答 11（应 11）",
+        "answer": "11",
+        "ms": 9825
+      },
+      "精确乘法": {
+        "pass": true,
+        "note": "答 56088（应 56088）",
+        "answer": "56088",
+        "ms": 2937
+      },
+      "小数比较": {
+        "pass": true,
+        "note": "答 9.9",
+        "answer": "9.9",
+        "ms": 14925
+      },
+      "字符反转": {
+        "pass": true,
+        "note": "fedcba",
+        "answer": "fedcba",
+        "ms": 8787
+      },
+      "逻辑推理": {
+        "pass": true,
+        "note": "鸡23 / 兔12",
+        "answer": "鸡有23只，兔子有12只。",
+        "ms": 19325
+      },
+      "指令遵循": {
+        "pass": true,
+        "note": "[2, 3, 5]（需 3 个 1-5 整数、和=10）",
+        "answer": "[2,3,5]",
+        "ms": 6945
+      }
+    },
+    "avg_ms": 10424,
+    "first_error": null,
+    "label": "Gpt-5-chat-latest",
+    "declared_context": 160000,
+    "declared_output": 64000,
+    "declared_max": 16384,
+    "measured_context": 32000,
+    "measured_output": 729,
+    "limit_notes": "输入 ≥128000 字符即失败；该长度下开头仍可见"
+  },
+  {
+    "model": "gemini-3.1-flash-lite-preview",
+    "score": 7,
+    "total": 8,
+    "checks": {
+      "字母计数": {
+        "pass": true,
+        "note": "答 3（应 3）",
+        "answer": "3",
+        "ms": 4206
+      },
+      "汉字计数": {
+        "pass": false,
+        "note": "答 14（应 16）",
+        "answer": "14",
+        "ms": 4491
+      },
+      "多步算术": {
+        "pass": true,
+        "note": "答 11（应 11）",
+        "answer": "11",
+        "ms": 4142
+      },
+      "精确乘法": {
+        "pass": true,
+        "note": "答 56088（应 56088）",
+        "answer": "56088",
+        "ms": 10507
+      },
+      "小数比较": {
+        "pass": true,
+        "note": "答 9.9",
+        "answer": "9.9 更大。",
+        "ms": 4060
+      },
+      "字符反转": {
+        "pass": true,
+        "note": "fedcba",
+        "answer": "fedcba",
+        "ms": 5122
+      },
+      "逻辑推理": {
+        "pass": true,
+        "note": "鸡23 / 兔12",
+        "answer": "鸡有 23 只，兔有 12 只。",
+        "ms": 4733
+      },
+      "指令遵循": {
+        "pass": true,
+        "note": "[3, 3, 4]（需 3 个 1-5 整数、和=10）",
+        "answer": "[3, 3, 4]",
+        "ms": 2765
+      }
+    },
+    "avg_ms": 5003,
+    "first_error": null,
+    "label": "G-3.1-flash",
+    "declared_context": 30720,
+    "declared_output": 16384,
+    "declared_max": 65535,
+    "measured_context": 32000,
+    "measured_output": 23892,
+    "limit_notes": "输入 ≥128000 字符即失败；该长度下开头仍可见；输出数到 5000"
+  },
+  {
+    "model": "deepseek-v4-flash",
+    "score": 8,
+    "total": 8,
+    "checks": {
+      "字母计数": {
+        "pass": true,
+        "note": "答 3（应 3）",
+        "answer": "3",
+        "ms": 4870
+      },
+      "汉字计数": {
+        "pass": true,
+        "note": "答 16（应 16）",
+        "answer": "16",
+        "ms": 4523
+      },
+      "多步算术": {
+        "pass": true,
+        "note": "答 11（应 11）",
+        "answer": "11",
+        "ms": 4161
+      },
+      "精确乘法": {
+        "pass": true,
+        "note": "答 56088（应 56088）",
+        "answer": "56088",
+        "ms": 10866
+      },
+      "小数比较": {
+        "pass": true,
+        "note": "答 9.9",
+        "answer": "9.9",
+        "ms": 3465
+      },
+      "字符反转": {
+        "pass": true,
+        "note": "fedcba",
+        "answer": "fedcba",
+        "ms": 1071
+      },
+      "逻辑推理": {
+        "pass": true,
+        "note": "鸡23 / 兔12",
+        "answer": "鸡23只，兔12只。",
+        "ms": 6130
+      },
+      "指令遵循": {
+        "pass": true,
+        "note": "[2, 3, 5]（需 3 个 1-5 整数、和=10）",
+        "answer": "[2,3,5]",
+        "ms": 9513
+      }
+    },
+    "avg_ms": 5575,
+    "first_error": null,
+    "label": "Deepseek-最新满血V4-flash",
+    "declared_context": 1000000,
+    "declared_output": 383216,
+    "declared_max": 30000,
+    "measured_context": 32000,
+    "measured_output": 23892,
+    "limit_notes": "输入 ≥128000 字符即失败；该长度下开头仍可见；输出数到 5000"
+  },
+  {
+    "model": "grok-3",
+    "score": 2,
+    "total": 8,
+    "checks": {
+      "字母计数": {
+        "pass": false,
+        "note": "答 1（应 3）",
+        "answer": "1",
+        "ms": 6555
+      },
+      "汉字计数": {
+        "pass": false,
+        "note": "答 1（应 16）",
+        "answer": "1",
+        "ms": 2862
+      },
+      "多步算术": {
+        "pass": false,
+        "note": "答 5（应 11）",
+        "answer": "5",
+        "ms": 3253
+      },
+      "精确乘法": {
+        "pass": false,
+        "note": "答 123（应 56088）",
+        "answer": "123 × 456 = 56088",
+        "ms": 3855
+      },
+      "小数比较": {
+        "pass": false,
+        "note": "答 9.11（应 9.9）",
+        "answer": "**9.11 更大。**",
+        "ms": 4124
+      },
+      "字符反转": {
+        "pass": true,
+        "note": "fedcba",
+        "answer": "fedcba",
+        "ms": 2946
+      },
+      "逻辑推理": {
+        "pass": false,
+        "note": "未同时给出 23 与 12",
+        "answer": "鸡和兔各19只。",
+        "ms": 3071
+      },
+      "指令遵循": {
+        "pass": true,
+        "note": "[3, 3, 4]（需 3 个 1-5 整数、和=10）",
+        "answer": "[3, 3, 4]",
+        "ms": 7752
+      }
+    },
+    "avg_ms": 4302,
+    "first_error": null,
+    "label": "Grok-3",
+    "declared_context": 128000,
+    "declared_output": 8192,
+    "declared_max": 4096,
+    "measured_context": 0,
+    "measured_output": 23892,
+    "limit_notes": "输入 ≥8000 字符即失败；输出数到 5000"
+  },
+  {
+    "model": "claude-3-7-sonnet-20250219-vip",
+    "score": 6,
+    "total": 8,
+    "checks": {
+      "字母计数": {
+        "pass": true,
+        "note": "答 3（应 3）",
+        "answer": "3",
+        "ms": 2350
+      },
+      "汉字计数": {
+        "pass": false,
+        "note": "答 17（应 16）",
+        "answer": "17",
+        "ms": 2308
+      },
+      "多步算术": {
+        "pass": true,
+        "note": "答 11（应 11）",
+        "answer": "11",
+        "ms": 2135
+      },
+      "精确乘法": {
+        "pass": true,
+        "note": "答 56088（应 56088）",
+        "answer": "56088",
+        "ms": 3761
+      },
+      "小数比较": {
+        "pass": false,
+        "note": "答 9.11（应 9.9）",
+        "answer": "9.11 更大。",
+        "ms": 2251
+      },
+      "字符反转": {
+        "pass": true,
+        "note": "fedcba",
+        "answer": "fedcba",
+        "ms": 3764
+      },
+      "逻辑推理": {
+        "pass": true,
+        "note": "鸡23 / 兔12",
+        "answer": "鸡23只，兔12只。",
+        "ms": 2121
+      },
+      "指令遵循": {
+        "pass": true,
+        "note": "[3, 3, 4]（需 3 个 1-5 整数、和=10）",
+        "answer": "[3, 3, 4]",
+        "ms": 2397
+      }
+    },
+    "avg_ms": 2636,
+    "first_error": null,
+    "label": "claude-3-7-sonnet-20250219",
+    "declared_context": 32768,
+    "declared_output": 8192,
+    "declared_max": 4096,
+    "measured_context": 32000,
+    "measured_output": 23892,
+    "limit_notes": "输入 ≥128000 字符即失败；该长度下开头仍可见；输出数到 5000"
+  },
+  {
+    "model": "glm-4.6",
+    "score": 6,
+    "total": 8,
+    "checks": {
+      "字母计数": {
+        "pass": true,
+        "note": "答 3（应 3）",
+        "answer": "3",
+        "ms": 20428
+      },
+      "汉字计数": {
+        "pass": false,
+        "note": "答 15（应 16）",
+        "answer": "15",
+        "ms": 18275
+      },
+      "多步算术": {
+        "pass": true,
+        "note": "答 11（应 11）",
+        "answer": "11",
+        "ms": 12252
+      },
+      "精确乘法": {
+        "pass": true,
+        "note": "答 56088（应 56088）",
+        "answer": "56088",
+        "ms": 2459
+      },
+      "小数比较": {
+        "pass": true,
+        "note": "答 9.9",
+        "answer": "9.9更大",
+        "ms": 3367
+      },
+      "字符反转": {
+        "pass": true,
+        "note": "fedcba",
+        "answer": "fedcba",
+        "ms": 2825
+      },
+      "逻辑推理": {
+        "pass": false,
+        "note": "未同时给出 23 与 12",
+        "answer": "[AI1001] 上一个提示正在进行,请稍后再提问",
+        "ms": 25666
+      },
+      "指令遵循": {
+        "pass": true,
+        "note": "[3, 4, 3]（需 3 个 1-5 整数、和=10）",
+        "answer": "[3,4,3]",
+        "ms": 2870
+      }
+    },
+    "avg_ms": 11018,
+    "first_error": null,
+    "label": "Glm-4.6",
+    "declared_context": 128000,
+    "declared_output": 8192,
+    "declared_max": 16384,
+    "measured_context": 32000,
+    "measured_output": 0,
+    "limit_notes": "输入 ≥128000 字符即失败；该长度下开头仍可见"
+  },
+  {
+    "model": "qwen3-8b",
+    "score": 0,
+    "total": 8,
+    "checks": {
+      "字母计数": {
+        "pass": false,
+        "note": "答 None（应 3）",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨BadRequest",
+        "ms": 3574
+      },
+      "汉字计数": {
+        "pass": false,
+        "note": "答 None（应 16）",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨BadRequest",
+        "ms": 3257
+      },
+      "多步算术": {
+        "pass": false,
+        "note": "答 None（应 11）",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨BadRequest",
+        "ms": 3394
+      },
+      "精确乘法": {
+        "pass": false,
+        "note": "答 None（应 56088）",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨BadRequest",
+        "ms": 3406
+      },
+      "小数比较": {
+        "pass": false,
+        "note": "未明确",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨BadRequest",
+        "ms": 3153
+      },
+      "字符反转": {
+        "pass": false,
+        "note": "不是 fedcba",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨BadRequest",
+        "ms": 3451
+      },
+      "逻辑推理": {
+        "pass": false,
+        "note": "未同时给出 23 与 12",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨BadRequest",
+        "ms": 3870
+      },
+      "指令遵循": {
+        "pass": false,
+        "note": "没有 JSON 数组",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨BadRequest",
+        "ms": 3526
+      }
+    },
+    "avg_ms": 3454,
+    "first_error": null,
+    "label": "Qwen-3",
+    "declared_context": 4096,
+    "declared_output": 4096,
+    "declared_max": 20000,
+    "measured_context": 0,
+    "measured_output": 31,
+    "limit_notes": "输入 ≥8000 字符即失败"
+  },
+  {
+    "model": "doubao-seed-2-0-lite-260428",
+    "score": 8,
+    "total": 8,
+    "checks": {
+      "字母计数": {
+        "pass": true,
+        "note": "答 3（应 3）",
+        "answer": "3",
+        "ms": 29005
+      },
+      "汉字计数": {
+        "pass": true,
+        "note": "答 16（应 16）",
+        "answer": "16",
+        "ms": 14187
+      },
+      "多步算术": {
+        "pass": true,
+        "note": "答 11（应 11）",
+        "answer": "11",
+        "ms": 4149
+      },
+      "精确乘法": {
+        "pass": true,
+        "note": "答 56088（应 56088）",
+        "answer": "56088",
+        "ms": 6599
+      },
+      "小数比较": {
+        "pass": true,
+        "note": "答 9.9",
+        "answer": "9.9更大。",
+        "ms": 4602
+      },
+      "字符反转": {
+        "pass": true,
+        "note": "fedcba",
+        "answer": "fedcba",
+        "ms": 2747
+      },
+      "逻辑推理": {
+        "pass": true,
+        "note": "鸡23 / 兔12",
+        "answer": "鸡有23只，兔有12只。",
+        "ms": 23890
+      },
+      "指令遵循": {
+        "pass": true,
+        "note": "[5, 3, 2]（需 3 个 1-5 整数、和=10）",
+        "answer": "[5, 3, 2]",
+        "ms": 16041
+      }
+    },
+    "avg_ms": 12653,
+    "first_error": null,
+    "label": "Doubao-Seed-2-0-lite",
+    "declared_context": 4096,
+    "declared_output": 4096,
+    "declared_max": 20000,
+    "measured_context": 32000,
+    "measured_output": 2049,
+    "limit_notes": "输入 ≥128000 字符即失败；该长度下开头仍可见；输出数到 539"
+  },
+  {
+    "model": "yi-lightning",
+    "score": 0,
+    "total": 8,
+    "checks": {
+      "字母计数": {
+        "pass": false,
+        "note": "答 None（应 3）",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨InternalServerError",
+        "ms": 5991
+      },
+      "汉字计数": {
+        "pass": false,
+        "note": "答 None（应 16）",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨InternalServerError",
+        "ms": 6441
+      },
+      "多步算术": {
+        "pass": false,
+        "note": "答 None（应 11）",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨InternalServerError",
+        "ms": 7595
+      },
+      "精确乘法": {
+        "pass": false,
+        "note": "答 None（应 56088）",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨InternalServerError",
+        "ms": 8028
+      },
+      "小数比较": {
+        "pass": false,
+        "note": "未明确",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨InternalServerError",
+        "ms": 6155
+      },
+      "字符反转": {
+        "pass": false,
+        "note": "不是 fedcba",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨InternalServerError",
+        "ms": 6162
+      },
+      "逻辑推理": {
+        "pass": false,
+        "note": "未同时给出 23 与 12",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨InternalServerError",
+        "ms": 7689
+      },
+      "指令遵循": {
+        "pass": false,
+        "note": "没有 JSON 数组",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨InternalServerError",
+        "ms": 6670
+      }
+    },
+    "avg_ms": 6841,
+    "first_error": null,
+    "label": "Yi-lightning",
+    "declared_context": 128000,
+    "declared_output": 16000,
+    "declared_max": 8192,
+    "measured_context": 0,
+    "measured_output": 40,
+    "limit_notes": "输入 ≥8000 字符即失败"
+  },
+  {
+    "model": "stepfun-ai/step-3.7-flash",
+    "score": 0,
+    "total": 8,
+    "checks": {
+      "字母计数": {
+        "pass": false,
+        "note": "答 None（应 3）",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨Gone",
+        "ms": 3399
+      },
+      "汉字计数": {
+        "pass": false,
+        "note": "答 None（应 16）",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨Gone",
+        "ms": 2979
+      },
+      "多步算术": {
+        "pass": false,
+        "note": "答 None（应 11）",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨Gone",
+        "ms": 2947
+      },
+      "精确乘法": {
+        "pass": false,
+        "note": "答 None（应 56088）",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨Gone",
+        "ms": 2958
+      },
+      "小数比较": {
+        "pass": false,
+        "note": "未明确",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨Gone",
+        "ms": 2931
+      },
+      "字符反转": {
+        "pass": false,
+        "note": "不是 fedcba",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨Gone",
+        "ms": 2964
+      },
+      "逻辑推理": {
+        "pass": false,
+        "note": "未同时给出 23 与 12",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨Gone",
+        "ms": 2972
+      },
+      "指令遵循": {
+        "pass": false,
+        "note": "没有 JSON 数组",
+        "answer": "抱歉，网络出现异常，请你重试或联系客服！🚨Gone",
+        "ms": 2969
+      }
+    },
+    "avg_ms": 3015,
+    "first_error": null,
+    "label": "Step-3.7-Flash",
+    "declared_context": null,
+    "declared_output": null,
+    "declared_max": null,
+    "measured_context": 0,
+    "measured_output": 25,
+    "limit_notes": "输入 ≥8000 字符即失败"
+  },
+  {
+    "model": "generalv3.5",
+    "score": 0,
+    "total": 8,
+    "checks": {
+      "字母计数": {
+        "pass": false,
+        "note": "答 None（应 3）",
+        "answer": "哦豁,我回答出错了耶~ 你重新试一试呗~ 🚨",
+        "ms": 529
+      },
+      "汉字计数": {
+        "pass": false,
+        "note": "答 None（应 16）",
+        "answer": "哦豁,我回答出错了耶~ 你重新试一试呗~ 🚨",
+        "ms": 453
+      },
+      "多步算术": {
+        "pass": false,
+        "note": "答 None（应 11）",
+        "answer": "哦豁,我回答出错了耶~ 你重新试一试呗~ 🚨",
+        "ms": 478
+      },
+      "精确乘法": {
+        "pass": false,
+        "note": "答 None（应 56088）",
+        "answer": "哦豁,我回答出错了耶~ 你重新试一试呗~ 🚨",
+        "ms": 456
+      },
+      "小数比较": {
+        "pass": false,
+        "note": "未明确",
+        "answer": "哦豁,我回答出错了耶~ 你重新试一试呗~ 🚨",
+        "ms": 460
+      },
+      "字符反转": {
+        "pass": false,
+        "note": "不是 fedcba",
+        "answer": "哦豁,我回答出错了耶~ 你重新试一试呗~ 🚨",
+        "ms": 9991
+      },
+      "逻辑推理": {
+        "pass": false,
+        "note": "未同时给出 23 与 12",
+        "answer": "哦豁,我回答出错了耶~ 你重新试一试呗~ 🚨",
+        "ms": 508
+      },
+      "指令遵循": {
+        "pass": false,
+        "note": "没有 JSON 数组",
+        "answer": "哦豁,我回答出错了耶~ 你重新试一试呗~ 🚨",
+        "ms": 474
+      }
+    },
+    "avg_ms": 1669,
+    "first_error": null,
+    "label": "Spark-max",
+    "declared_context": null,
+    "declared_output": null,
+    "declared_max": null,
+    "measured_context": 0,
+    "measured_output": 22,
+    "limit_notes": "输入 ≥8000 字符即失败"
+  }
+]

@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>AdiboProxy</RootNamespace>
+    <AssemblyName>AdiboProxy</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <InvariantGlobalization>true</InvariantGlobalization>
+
+    <!-- 发布成单文件原生程序：目标机器不需要装 .NET 运行时 -->
+    <PublishAot>true</PublishAot>
+    <StripSymbols>true</StripSymbols>
+    <IlcOptimizationPreference>Speed</IlcOptimizationPreference>
+    <IlcGenerateStackTraceData>false</IlcGenerateStackTraceData>
+    <!-- 本项目的响应体大量使用匿名类型，AOT 下需要保留反射序列化能力 -->
+    <JsonSerializerIsReflectionEnabledByDefault>false</JsonSerializerIsReflectionEnabledByDefault>
+    <!-- 为所有类型生成反射元数据，否则 System.Text.Json 的反射解析器在 AOT 下拿不到构造器 -->
+    <IlcGenerateCompleteTypeMetadata>true</IlcGenerateCompleteTypeMetadata>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 别把本程序集裁掉：匿名响应类型靠反射序列化 -->
+    <TrimmerRootAssembly Include="AdiboProxy" />
+  </ItemGroup>
+
+</Project>
